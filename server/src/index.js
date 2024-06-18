@@ -9,6 +9,7 @@ app.use(cors())
 app.use('/auth',userRouter)
 app.use('/recipes',recipesRouter)
 
+mongoose.connect("mongodb+srv://sushma:SrichapreSus192002@recipes.w21uyah.mongodb.net/recipes?retryWrites=true&w=majority&appName=recipes")
 mongoose.connection.on('connected', () => {
     console.log('Mongoose is connected to the database');
 });
